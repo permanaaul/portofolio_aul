@@ -37,10 +37,10 @@ const PROFILE = {
   github: "https://github.com/permanaaul",
   linkedin: "https://linkedin.com/in/permanaaul",
   photo: "/aul.jpg",
-  availability: "Tersedia segera — full-time, freelance, onsite, atau remote.",
+  availability:
+    "Tersedia segera — full-time, freelance, onsite, atau remote.",
   summary:
-  "Full-stack developer yang nyaman mengerjakan frontend dan backend. Saya suka membangun aplikasi yang bersih, cepat, dan mudah dirawat—dari perancangan REST API, skema database, sampai UI yang rapi. Pernah membantu memangkas waktu proses internal ±20% saat magang. Stack harian: Next.js/React, TypeScript, Node.js/Express, Prisma & MySQL, Tailwind, Git, Vercel."
-
+    "Full-stack developer yang nyaman mengerjakan frontend dan backend. Saya suka membangun aplikasi yang bersih, cepat, dan mudah dirawat dari perancangan REST API, skema database, sampai UI yang rapi. Pernah membantu memangkas waktu proses internal ±20% saat magang. Stack harian: Next.js/React, TypeScript, Node.js/Express, Prisma & MySQL, Tailwind, Git, Vercel.",
 };
 
 const EDUCATIONS = [
@@ -62,26 +62,29 @@ const EDUCATIONS = [
 ];
 
 const SKILLS: Record<string, string[]> = {
-    Languages: ["TypeScript", "JavaScript (ES6+)"],
-    Frontend: ["Next.js", "React", "Tailwind CSS"],
-    Backend: ["Node.js", "Express.js", "REST API"],
-    Database: ["MySQL", "Prisma ORM"],
-    Tools: ["Vercel", "GitHub"],
-    "Soft Skills": [
-      "Penyelesaian Masalah",
-      "Komunikasi Teknis",
-      "Kolaborasi Tim",
-      "Manajemen Waktu & Prioritas",
-      "Adaptif & Proaktif",
-      "Cepat Belajar (Growth Mindset)",
-      "Teliti (Attention to Detail)",
-      "Empati pada Pengguna"
-    ],
-  };
-  
-  
+  Languages: ["TypeScript", "JavaScript (ES6+)"],
+  Frontend: ["Next.js", "React", "Tailwind CSS"],
+  Backend: ["Node.js", "Express.js", "REST API"],
+  Database: ["MySQL", "Prisma ORM"],
+  Tools: ["Vercel", "GitHub"],
+  "Soft Skills": [
+    "Penyelesaian Masalah",
+    "Komunikasi Teknis",
+    "Kolaborasi Tim",
+    "Manajemen Waktu & Prioritas",
+    "Adaptif & Proaktif",
+    "Cepat Belajar (Growth Mindset)",
+    "Teliti (Attention to Detail)",
+    "Empati pada Pengguna",
+  ],
+};
 
-type TimelineItem = { period: string; title: string; org: string; points: string[] };
+type TimelineItem = {
+  period: string;
+  title: string;
+  org: string;
+  points: string[];
+};
 
 const TIMELINE: TimelineItem[] = [
   {
@@ -115,17 +118,32 @@ const PROJECTS: Project[] = [
     title: "Invoice Management App",
     summary:
       "Invoice, client tracking, kirim via Gmail (Express + Nodemailer). Respons API rata-rata < 1 detik.",
-    stack: ["Next.js", "Tailwind", "Express.js", "TypeScript", "Nodemailer", "Axios"],
+    stack: [
+      "Next.js",
+      "Tailwind",
+      "Express.js",
+      "TypeScript",
+      "Nodemailer",
+      "Axios",
+    ],
   },
   {
     title: "Ticketing Management App",
     summary:
       "Pencarian/penyaringan, tiket IDR, promo (voucher/referral), review & rating attendee.",
-    stack: ["Next.js", "Tailwind", "Express.js", "TypeScript", "Nodemailer", "Axios"],
+    stack: [
+      "Next.js",
+      "Tailwind",
+      "Express.js",
+      "TypeScript",
+      "Nodemailer",
+      "Axios",
+    ],
   },
   {
     title: "Sistem Informasi Pembinaan & Prestasi Olahraga (D3)",
-    summary: "Pencatatan pembinaan & prestasi atlet Lempar Pisau & Kapak Sumbar.",
+    summary:
+      "Pencatatan pembinaan & prestasi atlet Lempar Pisau & Kapak Sumbar.",
     stack: ["Laravel", "MySQL"],
   },
   {
@@ -135,10 +153,52 @@ const PROJECTS: Project[] = [
   },
 ];
 
+/* ====== Pengalaman Organisasi (BARU) ====== */
+type OrgExp = {
+  name: string;
+  origin: string;
+  period: string;
+  division: string;
+  role: string;
+  location: string;
+  bullets: string[];
+};
+
+const ORGS: OrgExp[] = [
+  {
+    name:
+      "PPI MSU (Persatuan Pelajar Indonesia Management & Science University)",
+    origin: "Management Science University, Shah Alam, Selangor, Malaysia",
+    period: "September 2022 – Desember 2023",
+    division: "Keanggotaan",
+    role: "Anggota (Pasif) — Volunteer ad hoc",
+    location: "Shah Alam, Selangor (Malaysia)",
+    bullets: [
+      "Hadir & membantu sebagai Petugas Penggerek Bendera pada upacara HUT RI di kampus.",
+      "Mendukung persiapan upacara (cek tiang, tali, bendera) dan ikut gladi singkat.",
+      "Berpartisipasi pada kegiatan olahraga PPI (futsal, voli, basket).",
+      "Membantu koordinasi ringan (absen, pengaturan giliran, beres-beres venue).",
+      "Sesekali bantu dokumentasi singkat untuk publikasi internal.",
+    ],
+  },
+];
+
 const CERTIFICATIONS = [
-  { name: "Sertifikat Magang — IT Engineer", issuer: "PT. Bejana Investidata Globalindo", icon: <FileBadge2 className="w-4 h-4" /> },
-  { name: "TOEFL NEO (Score 550)", issuer: "Spectra English Course", icon: <Award className="w-4 h-4" /> },
-  { name: "Bootcamp — Full-stack Web Development", issuer: "Purwadhika Digital School", icon: <GraduationCap className="w-4 h-4" /> },
+  {
+    name: "Sertifikat Magang — IT Engineer",
+    issuer: "PT. Bejana Investidata Globalindo",
+    icon: <FileBadge2 className="w-4 h-4" />,
+  },
+  {
+    name: "TOEFL NEO (Score 550)",
+    issuer: "Spectra English Course",
+    icon: <Award className="w-4 h-4" />,
+  },
+  {
+    name: "Bootcamp — Full-stack Web Development",
+    issuer: "Purwadhika Digital School",
+    icon: <GraduationCap className="w-4 h-4" />,
+  },
 ];
 
 const HOBBIES = [
@@ -158,7 +218,7 @@ const fadeIn = (delay = 0) => ({
 /* ======================= Page ======================= */
 
 export default function AboutPage() {
-  const VISIBLE_PROJECTS = 4; // tampilkan 4 dulu biar kompak (bisa ubah ke 6)
+  const VISIBLE_PROJECTS = 4; // tampilkan 4 dulu biar kompak
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-slate-100">
@@ -168,7 +228,10 @@ export default function AboutPage() {
           {/* ========== LEFT ========== */}
           <div className="space-y-6">
             {/* Profile + contacts */}
-            <motion.div {...fadeIn(0)} className="rounded-2xl border border-white/10 bg-white/[0.02] p-6">
+            <motion.div
+              {...fadeIn(0)}
+              className="rounded-2xl border border-white/10 bg-white/[0.02] p-6"
+            >
               <div className="flex items-center gap-4">
                 <div className="relative">
                   <div className="absolute -inset-1 rounded-full bg-gradient-to-tr from-cyan-600/40 via-cyan-400/30 to-transparent blur-md" />
@@ -193,16 +256,31 @@ export default function AboutPage() {
               </div>
 
               <div className="mt-5 grid grid-cols-2 gap-3 text-sm">
-                <Link href={`mailto:${PROFILE.email}`} className="inline-flex items-center gap-2 rounded-lg border border-white/10 px-3 py-2 hover:bg-white/5">
+                <Link
+                  href={`mailto:${PROFILE.email}`}
+                  className="inline-flex items-center gap-2 rounded-lg border border-white/10 px-3 py-2 hover:bg-white/5"
+                >
                   <Mail className="w-4 h-4" /> Email
                 </Link>
-                <a href={PROFILE.whatsapp} target="_blank" className="inline-flex items-center gap-2 rounded-lg border border-white/10 px-3 py-2 hover:bg-white/5">
+                <a
+                  href={PROFILE.whatsapp}
+                  target="_blank"
+                  className="inline-flex items-center gap-2 rounded-lg border border-white/10 px-3 py-2 hover:bg-white/5"
+                >
                   <Phone className="w-4 h-4" /> WhatsApp
                 </a>
-                <a href={PROFILE.github} target="_blank" className="inline-flex items-center gap-2 rounded-lg border border-white/10 px-3 py-2 hover:bg-white/5">
+                <a
+                  href={PROFILE.github}
+                  target="_blank"
+                  className="inline-flex items-center gap-2 rounded-lg border border-white/10 px-3 py-2 hover:bg-white/5"
+                >
                   <Github className="w-4 h-4" /> GitHub
                 </a>
-                <a href={PROFILE.linkedin} target="_blank" className="inline-flex items-center gap-2 rounded-lg border border-white/10 px-3 py-2 hover:bg-white/5">
+                <a
+                  href={PROFILE.linkedin}
+                  target="_blank"
+                  className="inline-flex items-center gap-2 rounded-lg border border-white/10 px-3 py-2 hover:bg-white/5"
+                >
                   <Linkedin className="w-4 h-4" /> LinkedIn
                 </a>
               </div>
@@ -214,7 +292,10 @@ export default function AboutPage() {
             </motion.div>
 
             {/* Goals */}
-            <motion.div {...fadeIn(0.2)} className="rounded-2xl border border-white/10 bg-white/[0.02] p-6">
+            <motion.div
+              {...fadeIn(0.2)}
+              className="rounded-2xl border border-white/10 bg-white/[0.02] p-6"
+            >
               <h2 className="font-semibold mb-3 flex items-center gap-2">
                 <Target className="w-5 h-5 text-cyan-300" /> Apa yang Saya Cari
               </h2>
@@ -232,9 +313,12 @@ export default function AboutPage() {
               </ul>
               <div className="mt-3 text-sm text-emerald-300">Siap mulai segera.</div>
             </motion.div>
-            
+
             {/* Education */}
-            <motion.div {...fadeIn(0.15)} className="rounded-2xl border border-white/10 bg-white/[0.02] p-6">
+            <motion.div
+              {...fadeIn(0.15)}
+              className="rounded-2xl border border-white/10 bg-white/[0.02] p-6"
+            >
               <h3 className="font-semibold mb-4 flex items-center gap-2">
                 <GraduationCap className="w-5 h-5 text-cyan-300" /> Pendidikan
               </h3>
@@ -243,7 +327,9 @@ export default function AboutPage() {
                   <li key={i} className="border border-white/10 rounded-xl p-4">
                     <div className="text-sm text-slate-300">{e.where}</div>
                     <div className="font-medium">{e.degree}</div>
-                    {e.faculty && <div className="text-sm text-slate-400">{e.faculty}</div>}
+                    {e.faculty && (
+                      <div className="text-sm text-slate-400">{e.faculty}</div>
+                    )}
                     {e.gpa && (
                       <div className="mt-1 inline-flex items-center gap-2 text-xs text-slate-300 bg-white/5 border border-white/10 px-2 py-1 rounded-md">
                         <Award className="w-3.5 h-3.5" /> {e.gpa}
@@ -255,7 +341,10 @@ export default function AboutPage() {
             </motion.div>
 
             {/* Certifications */}
-            <motion.div {...fadeIn(0.05)} className="rounded-2xl border border-white/10 bg-white/[0.03] p-6">
+            <motion.div
+              {...fadeIn(0.05)}
+              className="rounded-2xl border border-white/10 bg-white/[0.03] p-6"
+            >
               <h3 className="font-semibold mb-3">Sertifikasi</h3>
               <ul className="space-y-2 text-sm text-slate-300">
                 {CERTIFICATIONS.map((c) => (
@@ -271,11 +360,17 @@ export default function AboutPage() {
             </motion.div>
 
             {/* Personality */}
-            <motion.div {...fadeIn(0.1)} className="rounded-2xl border border-white/10 bg-gradient-to-b from-slate-900/60 to-slate-950/80 p-6">
+            <motion.div
+              {...fadeIn(0.1)}
+              className="rounded-2xl border border-white/10 bg-gradient-to-b from-slate-900/60 to-slate-950/80 p-6"
+            >
               <h3 className="font-semibold mb-3">Personality & Hobi</h3>
               <div className="flex flex-wrap gap-2">
                 {HOBBIES.map((h) => (
-                  <span key={h.label} className="inline-flex items-center gap-2 text-sm px-3 py-1.5 rounded-full bg-white/5 border border-white/10">
+                  <span
+                    key={h.label}
+                    className="inline-flex items-center gap-2 text-sm px-3 py-1.5 rounded-full bg-white/5 border border-white/10"
+                  >
                     <span className="text-cyan-300">{h.icon}</span>
                     {h.label}
                   </span>
@@ -287,23 +382,36 @@ export default function AboutPage() {
           {/* ========== RIGHT ========== */}
           <div className="space-y-6">
             {/* Summary */}
-            <motion.div {...fadeIn(0)} className="rounded-2xl border border-white/10 bg-white/[0.02] p-6">
-              <h1 className="text-2xl md:text-3xl font-bold mb-2">Tentang Saya</h1>
+            <motion.div
+              {...fadeIn(0)}
+              className="rounded-2xl border border-white/10 bg-white/[0.02] p-6"
+            >
+              <h1 className="text-2xl md:text-3xl font-bold mb-2">
+                Tentang Saya
+              </h1>
               <p className="text-slate-300">{PROFILE.summary}</p>
             </motion.div>
 
             {/* Skills */}
-            <motion.div {...fadeIn(0.05)} className="rounded-2xl border border-white/10 bg-gradient-to-b from-slate-900/60 to-slate-950/80 p-6">
+            <motion.div
+              {...fadeIn(0.05)}
+              className="rounded-2xl border border-white/10 bg-gradient-to-b from-slate-900/60 to-slate-950/80 p-6"
+            >
               <h2 className="font-semibold mb-4 flex items-center gap-2">
                 <Code2 className="w-5 h-5 text-cyan-300" /> Keahlian
               </h2>
               <div className="grid sm:grid-cols-2 gap-6">
                 {Object.entries(SKILLS).map(([group, items]) => (
                   <div key={group}>
-                    <div className="text-sm font-medium text-slate-300 mb-2">{group}</div>
+                    <div className="text-sm font-medium text-slate-300 mb-2">
+                      {group}
+                    </div>
                     <div className="flex flex-wrap gap-2">
                       {items.map((it) => (
-                        <span key={it} className="text-[11px] px-2 py-1 rounded-md bg-white/5 border border-white/10">
+                        <span
+                          key={it}
+                          className="text-[11px] px-2 py-1 rounded-md bg-white/5 border border-white/10"
+                        >
                           {it}
                         </span>
                       ))}
@@ -313,8 +421,11 @@ export default function AboutPage() {
               </div>
             </motion.div>
 
-            {/* Experience */}
-            <motion.div {...fadeIn(0.1)} className="rounded-2xl border border-white/10 bg-white/[0.02] p-6">
+            {/* Experience (Kerja) */}
+            <motion.div
+              {...fadeIn(0.1)}
+              className="rounded-2xl border border-white/10 bg-white/[0.02] p-6"
+            >
               <h2 className="font-semibold mb-4 flex items-center gap-2">
                 <Briefcase className="w-5 h-5 text-cyan-300" /> Pengalaman
               </h2>
@@ -325,10 +436,54 @@ export default function AboutPage() {
                       <Calendar className="w-3.5 h-3.5" />
                       {t.period}
                     </div>
-                    <div className="text-base font-semibold mt-1">{t.title}</div>
+                    <div className="text-base font-semibold mt-1">
+                      {t.title}
+                    </div>
                     <div className="text-sm text-slate-300">{t.org}</div>
                     <ul className="mt-2 list-disc pl-5 text-sm text-slate-300/90 space-y-1">
-                      {t.points.map((p, j) => <li key={j}>{p}</li>)}
+                      {t.points.map((p, j) => (
+                        <li key={j}>{p}</li>
+                      ))}
+                    </ul>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+
+            {/* Pengalaman Organisasi (BARU) */}
+            <motion.div
+              {...fadeIn(0.12)}
+              className="rounded-2xl border border-white/10 bg-white/[0.02] p-6"
+            >
+              <h2 className="font-semibold mb-4 flex items-center gap-2">
+                <Users className="w-5 h-5 text-cyan-300" /> Pengalaman Organisasi
+              </h2>
+
+              <ul className="space-y-5">
+                {ORGS.map((o, i) => (
+                  <li key={i}>
+                    <div className="text-base font-semibold">{o.name}</div>
+                    <div className="text-sm text-slate-300">{o.origin}</div>
+
+                    <div className="mt-2 flex flex-wrap gap-3 text-xs text-slate-400">
+                      <span className="inline-flex items-center gap-1">
+                        <Calendar className="w-3.5 h-3.5" />
+                        {o.period}
+                      </span>
+                      <span className="inline-flex items-center gap-1">
+                        <Users className="w-3.5 h-3.5" />
+                        {o.division} • {o.role}
+                      </span>
+                      <span className="inline-flex items-center gap-1">
+                        <MapPin className="w-3.5 h-3.5" />
+                        {o.location}
+                      </span>
+                    </div>
+
+                    <ul className="mt-2 list-disc pl-5 text-sm text-slate-300/90 space-y-1">
+                      {o.bullets.map((b, j) => (
+                        <li key={j}>{b}</li>
+                      ))}
                     </ul>
                   </li>
                 ))}
@@ -336,13 +491,19 @@ export default function AboutPage() {
             </motion.div>
 
             {/* Projects (ringkas) */}
-            <motion.div {...fadeIn(0.15)} className="rounded-2xl border border-white/10 bg-gradient-to-b from-slate-900/60 to-slate-950/80 p-6">
+            <motion.div
+              {...fadeIn(0.15)}
+              className="rounded-2xl border border-white/10 bg-gradient-to-b from-slate-900/60 to-slate-950/80 p-6"
+            >
               <h2 className="font-semibold mb-4 flex items-center gap-2">
                 <Briefcase className="w-5 h-5 text-cyan-300" /> Projects Terpilih
               </h2>
               <div className="grid sm:grid-cols-2 gap-4">
                 {PROJECTS.slice(0, VISIBLE_PROJECTS).map((p, idx) => (
-                  <div key={idx} className="rounded-xl border border-white/10 bg-white/[0.03] p-4">
+                  <div
+                    key={idx}
+                    className="rounded-xl border border-white/10 bg-white/[0.03] p-4"
+                  >
                     <div className="flex items-center gap-2">
                       <Rocket className="w-4 h-4 text-cyan-300" />
                       <h3 className="font-semibold">{p.title}</h3>
@@ -350,7 +511,10 @@ export default function AboutPage() {
                     <p className="mt-2 text-sm text-slate-300/90">{p.summary}</p>
                     <div className="mt-3 flex flex-wrap gap-2">
                       {p.stack.slice(0, 4).map((s) => (
-                        <span key={s} className="text-[11px] px-2 py-1 rounded-md bg-white/5 border border-white/10">
+                        <span
+                          key={s}
+                          className="text-[11px] px-2 py-1 rounded-md bg-white/5 border border-white/10"
+                        >
                           {s}
                         </span>
                       ))}
@@ -359,15 +523,15 @@ export default function AboutPage() {
                 ))}
               </div>
 
-              {/* tombol opsional lihat semua */}
               <div className="mt-4">
-                <Link href="/project" className="text-sm text-cyan-300 hover:underline">
+                <Link
+                  href="/project"
+                  className="text-sm text-cyan-300 hover:underline"
+                >
                   Lihat semua project →
                 </Link>
               </div>
             </motion.div>
-
-            
           </div>
         </div>
       </section>

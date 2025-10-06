@@ -197,7 +197,7 @@ export default function ProjectsPage() {
           transition={{ duration: 0.5, delay: 0.05 }}
           className="mt-3 text-slate-300 max-w-3xl"
         >
-          Setiap kartu menampilkan preview, stack, dan keterangan lengkap—tanpa
+          Setiap kartu menampilkan preview, stack, dan keterangan lengkap tanpa
           perlu halaman detail terpisah.
         </motion.p>
       </section>

@@ -21,7 +21,7 @@ export default function Home() {
             Hi, saya <span className="text-cyan-600">Aulia Permana</span> 👋
           </h1>
           <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-xl">
-  Saya Aulia Permana, seorang <span className="font-semibold">Fullstack Developer</span> 
+  Saya Aulia Permana, seorang <span className="font-semibold">Fullstack Developer </span> 
   yang menguasai pengembangan <span className="font-semibold">frontend</span> dan 
   <span className="font-semibold"> backend</span>. Dengan pengalaman membangun aplikasi 
   berbasis <span className="font-semibold">Next.js, React, dan Node.js</span>, saya terbiasa 

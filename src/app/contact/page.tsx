@@ -29,10 +29,9 @@ export default function ContactPage() {
       preferences: ["Full-time", "Freelance", "Onsite", "Remote"],
       availability: "Tersedia segera (sedang tidak terikat)",
       pitch: [
-        "Berpengalaman membangun modul bisnis nyata: Hublang, Asset Management, E-Office, dan GL.",
         "Clean architecture, performa & aksesibilitas diperhatikan, dokumentasi rapi.",
         "Terbiasa kolaborasi lintas fungsi dan komunikasi progres yang transparan.",
-        "Siap adaptasi cepat pada target & KPI, fokus ke hasil yang bisa diukur.",
+        "Siap adaptasi cepat pada target, fokus ke hasil yang bisa diukur.",
       ],
     }),
     []
@@ -139,8 +138,8 @@ ${message}
           <p className="mt-3 text-slate-300 max-w-3xl">
             Saya <span className="text-cyan-300 font-medium">{PROFILE.name}</span>, Full-stack Developer
             yang fokus pada <span className="font-medium">sistem modern, scalable, dan rapi</span>.
-            Portofolio ini membantu HR/Recruiter menilai kecocokan saya—baik{" "}
-            <span className="font-medium">full-time</span> maupun{" "}
+            Portofolio ini membantu HR/Recruiter menilai kecocokan saya dengan baik{" "}
+            <span className="font-medium">full-time, kontrak</span> maupun{" "}
             <span className="font-medium">freelance</span>.
           </p>
 
