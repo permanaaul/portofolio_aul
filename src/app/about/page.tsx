@@ -45,7 +45,7 @@ const PROFILE = {
 
 const EDUCATIONS = [
   {
-    where: "Management Science University (Malaysia)",
+    where: "Management & Science University (Malaysia)",
     degree: "BICT (Hons) — Bachelor in Information & Communication Technology",
     faculty: "Faculty of Information Sciences & Engineering",
     gpa: "IPK 3.01",
