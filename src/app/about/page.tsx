@@ -40,7 +40,7 @@ const PROFILE = {
   photo: "/aul.jpg",
   availability: "Tersedia segera — full-time, freelance, onsite, atau remote.",
   summary:
-    "Full-stack developer yang nyaman di frontend & backend. Fokus pada sistem yang bersih, cepat, dan mudah dirawat—mulai dari perancangan REST API, skema database, hingga UI yang rapi. Pernah membantu memangkas waktu proses internal ±20% saat magang. Stack harian: Next.js/React, TypeScript, Node.js/Express, Prisma & MySQL, Tailwind, Git, Vercel.",
+"Full-stack developer yang fokus pada pengembangan sistem bisnis. Nyaman bekerja di frontend dan backend, mulai dari perancangan API, pengelolaan database, hingga pembuatan UI yang rapi dan responsif. Saat ini terlibat dalam pengembangan sistem CRM Sales menggunakan React, Python (Django), dan Golang untuk kebutuhan internal perusahaan. Memiliki ketertarikan pada sistem yang terstruktur, scalable, dan mudah dirawat."
 };
 
 /** Pendidikan */
@@ -64,15 +64,30 @@ const EDUCATIONS = [
 
 /** Keahlian — disamakan dengan CV (Hard/Soft/Tools) */
 const SKILLS: Record<string, string[]> = {
-  Languages: ["TypeScript", "JavaScript (ES6+)"],
+  Languages: [
+    "TypeScript",
+    "JavaScript (ES6+)",
+    "Python ",
+    "Golang ",
+  ],
   Frontend: ["Next.js", "React", "Tailwind CSS"],
-  Backend: ["Node.js", "Express.js", "REST API"],
-  Database: ["MySQL", "Prisma ORM"],
+  Backend: [
+    "Node.js",
+    "Express.js",
+    "REST API",
+    "Django ",
+  ],
+  Database: [
+    "MySQL",
+    "PostgreSQL",
+    "Prisma ORM",
+  ],
   Tools: [
     "Git & GitHub",
     "Postman",
     "VS Code",
     "MySQL Workbench",
+    "DBeaver",
     "Prisma Studio",
     "Microsoft Office",
     "Google Workspace",
@@ -105,6 +120,28 @@ const TIMELINE: TimelineItem[] = [
       "Onboarding .NET & Vue; routine push & deploy sebagai bagian dari lifecycle tim.",
     ],
   },
+  {
+    period: "Maret 2026 – Sekarang",
+    title: "Junior Full Stack Developer",
+    org: "PT Intan Pariwara",
+    points: [
+      "Terlibat dalam pengembangan sistem CRM Sales untuk kebutuhan internal perusahaan.",
+      "Mengembangkan fitur frontend menggunakan React.",
+      "Mengembangkan backend menggunakan Python (Django) dan Golang.",
+      "Mengimplementasikan fitur delegasi approval dan approval work plan berbasis role.",
+      "Mengembangkan sistem absensi berbasis kamera dan geolocation (GPS).",
+      "Mengimplementasikan notifikasi real-time (web & mobile).",
+      "Integrasi Firebase Cloud Messaging (FCM) pada aplikasi mobile (Flutter).",
+      "Mengembangkan tracking lokasi real-time untuk monitoring aktivitas.",
+      "Membangun modul sumber dana pelanggan dan laporan terkait.",
+      "Melakukan enhancement backend untuk upload target dan hasil kunjungan.",
+      "Mengintegrasikan hasil visit dengan work plan.",
+      "Enhancement filter dan tampilan dashboard.",
+      "Mengembangkan fitur manajemen akun (ubah password & profil).",
+      "Membangun fitur kalender untuk perencanaan aktivitas.",
+  ],
+}
+
 ];
 
 /** Pengalaman Organisasi — selaras CV */
@@ -307,7 +344,45 @@ export default function AboutPage() {
                 ))}
               </div>
             </motion.div>
+            
+            <motion.div
+            {...fadeIn(0.15)}
+            className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-b from-slate-900/60 to-slate-950/80 p-6"
+          >
+            <h3 className="font-semibold mb-4 text-slate-200">
+              Highlight
+            </h3>
+
+            {/* MINI STATS */}
+            <div className="grid grid-cols-2 gap-3">
+              {[
+                { label: "Projects", value: "5+" },
+                { label: "Stack", value: "Multi Stack" },
+                { label: "Experience", value: "Active" },
+                { label: "Focus", value: "CRM System" },
+              ].map((item) => (
+                <div
+                  key={item.label}
+                  className="rounded-lg border border-white/10 bg-white/5 px-3 py-3 text-center
+                  hover:bg-cyan-500/10 hover:border-cyan-500/30 transition"
+                >
+                  <div className="text-lg font-semibold text-cyan-400">
+                    {item.value}
+                  </div>
+                  <div className="text-[11px] text-slate-400">
+                    {item.label}
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* SUBTLE GLOW EFFECT */}
+            <div className="pointer-events-none absolute -bottom-10 -left-10 w-40 h-40 bg-cyan-500/10 blur-3xl rounded-full" />
+          </motion.div>
+            
           </div>
+
+         
 
           {/* ========== RIGHT ========== */}
           <div className="space-y-6">
