@@ -59,9 +59,7 @@ export default function Home() {
             <span className="text-cyan-600">Aulia Permana</span> 👋
           </h1>
 
-          <p className="text-sm text-cyan-600 font-medium mb-4">
-            Building Real-World Business Systems (CRM, ERP, Internal Tools)
-          </p>
+          
 
           <p className="text-lg md:text-xl leading-relaxed text-gray-600 dark:text-gray-300 mb-6 max-w-xl">
             Saya seorang{" "}
