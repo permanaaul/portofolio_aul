@@ -121,8 +121,8 @@ const TIMELINE: TimelineItem[] = [
     ],
   },
   {
-    period: "Maret 2026 – Sekarang",
-    title: "Junior Full Stack Developer",
+    period: "09 Maret 2026 – 11 Juli 2026",
+    title: "Junior Programmer",
     org: "PT Intan Pariwara",
     points: [
       "Terlibat dalam pengembangan sistem CRM Sales untuk kebutuhan internal perusahaan.",
@@ -139,6 +139,14 @@ const TIMELINE: TimelineItem[] = [
       "Enhancement filter dan tampilan dashboard.",
       "Mengembangkan fitur manajemen akun (ubah password & profil).",
       "Membangun fitur kalender untuk perencanaan aktivitas.",
+  ],
+},
+{
+    period: "Juli 2026 – Sekarang",
+    title: "Junior Progammer Financial Reporting",
+    org: "PT Collega Inti Pratama",
+    points: [
+      
   ],
 }
 
